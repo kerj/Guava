@@ -7,17 +7,11 @@ import { GlobalNav } from '../Models/GlobalNav.model';
   styleUrls: ['./global-nav.component.css']
 })
 export class GlobalNavComponent {
-  @Input() globalNav: GlobalNav;
+  @Input() globalNavs: GlobalNav[];
   @Output() selectedNav = new EventEmitter();
-  
 
-
-
-
-  navSelect(clickedNav){
-    console.log(this);
-    
-    console.log(clickedNav);
-    this.selectedNav.emit(clickedNav);
+  goTo(thisNav: GlobalNav){
+    console.log(thisNav);
+    this.selectedNav.emit(thisNav);
   }
 }

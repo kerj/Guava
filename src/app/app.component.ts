@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { User } from './Models/user.model';
+import { GlobalNav } from './Models/GlobalNav.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'quava';
+  title = 'QUAVA';
+  selectedUser = null;
+  selectedNav = null;
+
+
+  masterUserList: User[] = [
+    new User('kerj','streamlined', 1),
+    new User('ODM','odm4president', 2),
+    new User('froome','franceisEZ', 3)
+  ];
+  
+  globalNavMenu: GlobalNav[] = [
+    new GlobalNav('Quava', 1),
+    new GlobalNav('Sign-Up', 2)
+  ];
+
+  globalNavigate(navSelect: GlobalNav){
+    this.selectedNav = navSelect;
+    console.log(this.selectedNav);
+  }
 }

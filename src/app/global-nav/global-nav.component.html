@@ -1,8 +1,4 @@
-<div class="container">
-  <ul>
-    <h1>GlobalNavs</h1>
-    <li>
-      <button (click)="navSelect(currentNav)">currentNav</button>
-    </li>
-  </ul>
+<div *ngFor="let selectedNav of globalNavs">
+  <button (click)="gotTo(selectedNav)">{{selectedNav.name}}</button>
 </div>
+

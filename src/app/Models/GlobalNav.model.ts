@@ -1,7 +1,6 @@
 export class GlobalNav {
-    Quava: 1;
-    Signup: 2;
 
+    constructor(public name: string , public id: number){ }
 };
 
     
