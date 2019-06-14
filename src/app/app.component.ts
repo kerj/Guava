@@ -11,6 +11,11 @@ export class AppComponent {
   title = 'QUAVA';
   selectedUser = null;
   selectedNav = null;
+  create = false;
+  profileFeed = false;
+  login = false;
+  userNav = false;
+  userProfile = false;
 
 
   masterUserList: User[] = [
@@ -27,5 +32,11 @@ export class AppComponent {
   globalNavigate(navSelect: GlobalNav){
     this.selectedNav = navSelect;
     console.log(this.selectedNav);
+  }
+
+  addUser(){
+    console.log(this);
+    
+    //show hide different componets that make sense....
   }
 }
