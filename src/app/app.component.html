@@ -6,8 +6,12 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
+<div *ngIf=(create)>
+  <app-create-user [userList]="masterUserList" (addEvent)="addUser()"></app-create-user>
+</div>
 
-<app-create-user [userList]="masterUserList" (addEvent)="addUser()"></app-create-user>
+<div *ngIf=(login)>
+  <app-user-login></app-user-login>
+</div>
 
-<app-user-login></app-user-login>
 <router-outlet></router-outlet>

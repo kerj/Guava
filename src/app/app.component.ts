@@ -30,8 +30,17 @@ export class AppComponent {
   ];
 
   globalNavigate(navSelect: GlobalNav){
+    //action comes from global-nav method 'goTo()'
     this.selectedNav = navSelect;
-    console.log(this.selectedNav);
+    console.log(this.selectedNav.name);
+    
+    if(this.selectedNav.name === 'Sign-Up'){
+      this.create = true;
+      this.login = false;
+    }else{
+      this.login = true;
+      this.create = false;
+    }
   }
 
   addUser(){
