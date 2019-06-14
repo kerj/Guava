@@ -10,8 +10,10 @@ export class GlobalNavComponent {
   @Input() globalNavs: GlobalNav[];
   @Output() selectedNav = new EventEmitter();
 
-  goTo(thisNav: GlobalNav){
-    console.log(thisNav);
-    this.selectedNav.emit(thisNav);
+  goTo(action){
+    console.log(action.id);
+    this.selectedNav.emit(action);
   }
+
+
 }
