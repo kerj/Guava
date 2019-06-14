@@ -43,9 +43,15 @@ export class AppComponent {
     }
   }
 
+
+  userLogin(userName: string){
+    this.selectedUser = userName
+    console.log(this.selectedUser);
+    
+  }
+
   addUser(){
     console.log(this);
-    
     //show hide different componets that make sense....
   }
 }

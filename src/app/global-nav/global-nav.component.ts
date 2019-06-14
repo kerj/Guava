@@ -11,7 +11,6 @@ export class GlobalNavComponent {
   @Output() selectedNav = new EventEmitter();
 
   goTo(action){
-    console.log(action.id);
     this.selectedNav.emit(action);
   }
 

@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-user-login',
   templateUrl: './user-login.component.html',
   styleUrls: ['./user-login.component.css']
 })
-export class UserLoginComponent implements OnInit {
+export class UserLoginComponent {
+  @Output() userToFind = new EventEmitter()
 
-  constructor() { }
-
-  ngOnInit() {
+  findUser(userName: string){
+    this.userToFind.emit(userName);
   }
 
+  
 }

@@ -1,9 +1,14 @@
 <div class="container">
     <h1 class="jumbotron">#1,000,000 APP for Cyclists!</h1>
     <h3>Sign in</h3>
-    <!-- <button class="btn btn-success swag">SIGN UP WITH FACEBOOK</button>
-    <button class="btn btn-success">SIGN UP WITH GOOGLE</button> -->
-    <button class="btn btn-success">USE MY EMAIL</button>
-
-
+    <app-global-nav></app-global-nav>
+    <form>
+        <label for="username">User Name</label>
+        <input [(ngModel)]="userName" type="text" name="userName" required>
+    
+        <!-- <label for="password">Password</label>
+        <input [(ngModel)]="password" type="text" name="password" required> -->
+      
+      <button class="btn btn-info" (click)="findUser(userName)">Login</button>
+  </form>
 </div>

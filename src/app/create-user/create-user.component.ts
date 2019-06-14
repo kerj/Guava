@@ -14,7 +14,6 @@ export class CreateUserComponent{
     let userId = this.userList.length+1;
     let newUser = new User(userName, password, userId);
     this.userList.push(newUser);
-    console.log(this.userList)
   }
 
   addUser(userToAdd: User){
