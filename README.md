@@ -1,27 +1,47 @@
-# Quava
+# _Quava_
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
+#### _A Showcase of HTML and CSS, 3/22/2019_
 
-## Development server
+#### By _**Justin Kerntz**_
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Description
 
-## Code scaffolding
+_A rebuild of the popular site strava_
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Setup/Installation Requirements
 
-## Build
+* _This project was generated with Angular CLI_
+* _running the `ng serve` command will open the dev server;       Navigate to `http://localhost:4200/`._
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+_This is a page that will open in most up-to-date browsers. This page features several Angular componets to respond to how the user navigates the page._
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Specs
 
-## Running end-to-end tests
+| Behavior | Input | Output |
+| ------------- |:-------------:| -----:|
+| The page takes login values and displays them dynamically | "Name/Pass" | "Welcome back, 'Name'" |
+| The page utilizes componets to display the correct information to user on different events" | "'click on rides'" | "Here are a list of your rides." |
+| The page utilizes a global nav bar to help the user navigate". | "Home button" | "Returns to home page" |
+| The page utilizes a user nav bar to help the user navigate their specific data". | "My rides button" | "Directs user to list of their rides." |
+| The page allows users to add a ride to their profile via a form entry | "Big ride, 100Miles, 'Felt great to get out'" | New ride added to list for user. |
+| The page allows users to edit some of the features of their ride, such as name. | "Big ride = Great ride" | Edited field updates for user. |
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Known Bugs
 
-## Further help
+_None to date_
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Support and contact details
+
+_Feel free to contact me via Github [Click here](https://github.com/kerj) or Linkedin [Click here](https://www.linkedin.com/in/kerntzj)_
+
+## Technologies Used
+
+_Typescript, Angular, CSS _
+
+### License
+
+*MIT*
+
+Copyright (c) 2019 **_Justin Kerntz - Epicodus_**
+
