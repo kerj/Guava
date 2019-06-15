@@ -11,7 +11,7 @@
 </div>
 
 <div *ngIf=(login)>
-  <app-user-login></app-user-login>
+  <app-user-login (userToFind)="userLogin($event)"></app-user-login>
 </div>
 
 <!-- <div *ngIf=(userProfile && selectedUser)>

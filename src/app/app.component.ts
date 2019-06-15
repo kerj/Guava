@@ -46,7 +46,20 @@ export class AppComponent {
 
   userLogin(userName: string){
     this.selectedUser = userName
-    console.log(this.selectedUser);
+    let userNames = this.masterUserList.filter(obj =>{
+      return obj.userName === this.selectedUser;
+    });
+    
+     
+    if(userNames.length === 1){
+      
+      //user can log in
+      
+    }else{
+     //no match found for user
+      
+    }
+    
     
   }
 
