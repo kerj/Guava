@@ -1,4 +1,9 @@
-<ul>
-  <li *ngFor="let selectedNav of globalNavs"><button class="nav" (click)="goTo(selectedNav)">{{selectedNav.name}}</button></li>
-</ul>
 
+<ul>
+  <li>
+    <button class="nav" (click)="goTo('home')">Guava</button>
+  </li>
+  <li>
+    <button class="nav" (click)="goTo('create')"><a routerLink="create">Sign-Up</a></button>
+  </li>
+</ul>

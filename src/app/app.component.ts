@@ -24,19 +24,21 @@ export class AppComponent {
     new User('froome','franceisEZ', 3)
   ];
   
-  globalNavMenu: GlobalNav[] = [
-    new GlobalNav('Quava', 1),
-    new GlobalNav('Sign-Up', 2)
-  ];
+  // globalNavMenu: GlobalNav[] = [
+  //   new GlobalNav('Quava', 1),
+  //   new GlobalNav('Sign-Up', 2)
+  // ];
 
   globalNavigate(navSelect: GlobalNav){
     //action comes from global-nav method 'goTo()'
     this.selectedNav = navSelect;
-    console.log(this.selectedNav.name);
+  
     
-    if(this.selectedNav.name === 'Sign-Up'){
+    if(this.selectedNav === 'create'){ 
       this.create = true;
-      this.login = false;
+      this.login = false;  
+      console.log(this.create);
+      
     }else{
       this.login = true;
       this.create = false;

@@ -22,7 +22,7 @@ li {
     float: left;
 }
  
-li:nth-child(2) > button, .nav:nth-child(2) {
+li:nth-child(2) > button, .nav:nth-child(2), a {
     float: right;
     background: #E95420;
     border: 3px;
@@ -30,4 +30,5 @@ li:nth-child(2) > button, .nav:nth-child(2) {
     padding:5px;
     color: #fff;
 }
+
   

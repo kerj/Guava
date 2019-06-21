@@ -1,6 +1,6 @@
-<app-global-nav></app-global-nav>
 
-<div>
+
+<div *ngIf="create">
   <form>
     <label for="username">User Name</label>
       <input [(ngModel)]="userName" type="text" name="userName" required>
