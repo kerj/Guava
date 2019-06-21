@@ -1,4 +1,4 @@
-<ul *ngFor="let selectedNav of globalNavs">
-  <li><button class="nav" (click)="goTo(selectedNav)">{{selectedNav.name}}</button></li>
+<ul>
+  <li *ngFor="let selectedNav of globalNavs"><button class="nav" (click)="goTo(selectedNav)">{{selectedNav.name}}</button></li>
 </ul>
 
