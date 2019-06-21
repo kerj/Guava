@@ -10,9 +10,10 @@ export class CreateUserComponent{
   @Input() userList: User[];
   @Output() addEvent = new EventEmitter();
 
+  
+
   createUser(userName, password){
-    let userId = this.userList.length+1;
-    let newUser = new User(userName, password, userId);
+    let newUser = new User(userName, password);
     this.userList.push(newUser);
   }
 

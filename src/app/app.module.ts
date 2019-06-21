@@ -10,7 +10,18 @@ import { UserNavComponent } from './user-nav/user-nav.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { ProfileFeedComponent } from './profile-feed/profile-feed.component';
 import { CreateUserComponent } from './create-user/create-user.component';
-import { routing } from './app-routing.module'
+import { routing } from './app-routing.module';
+import { masterFirebaseConfig } from './api-keys';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+export const firebaseConfig = {
+  apiKey: masterFirebaseConfig.apiKey,
+  authDomain: masterFirebaseConfig.authDomain,
+  databaseURL: masterFirebaseConfig.databaseUrl,
+  storageBucket: masterFirebaseConfig.storageBucket
+};
+
 
 @NgModule({
   declarations: [
@@ -25,7 +36,9 @@ import { routing } from './app-routing.module'
   imports: [
     BrowserModule,
     FormsModule,
-    routing
+    routing,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

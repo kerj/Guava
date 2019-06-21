@@ -3,7 +3,7 @@ button {
     font-weight: 900;
     font-size: 20px;
     text-align: center;
-    color: #fff;
+    color: whitesmoke;
 }
 button:hover {
     box-shadow: 0 12px 16px 0 rgba(230, 220, 220, 0.24), 0 17px 50px 0 rgba(240, 240, 240, 0.19);
@@ -20,13 +20,12 @@ button#brand, a#brand {
     background: whitesmoke;
     float: left;
     color: #E95420;
+    border: none;
 }
  
 .nav {
     float: right;
     background: #E95420;
     border: 3px;
-    color: #fff;
+    color: whitesmoke;
 }
-
-  

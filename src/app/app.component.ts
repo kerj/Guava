@@ -19,9 +19,9 @@ export class AppComponent {
 
 
   masterUserList: User[] = [
-    new User('kerj','streamlined', 1),
-    new User('ODM','odm4president', 2),
-    new User('froome','franceisEZ', 3)
+    new User('kerj','streamlined'),
+    new User('ODM','odm4president'),
+    new User('froome','franceisEZ')
   ];
   
   // globalNavMenu: GlobalNav[] = [
