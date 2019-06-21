@@ -1,0 +1,34 @@
+{ "users": [{
+    "name":"kerj",
+    "password":"streamlined",
+    "lastRide": {
+        "miles": "60",
+        "averageMPH": "21.9",
+        "movingTime": "2:44:23"
+    },
+    "description": "Keep it Rolling, Keep it Real!",
+    "id": 1
+},
+{
+    "name":"ODM",
+    "password":"odm4preZ",
+    "lastRide": {
+        "miles": "30",
+        "averageMPH": "18.3",
+        "movingTime": "1:38:22"
+    },
+    "description": "650B is the best!",
+    "id": 2
+},
+{
+    "name":"froome",
+    "password":"Fran-Say-Isay-E-Zay",
+    "lastRide": {
+        "miles": "100",
+        "averageMPH": "25.4",
+        "movingTime": "3:56:13"
+    },
+    "description": "Ride it like you stole it!",
+    "id": 3
+}]
+}
