@@ -48,3 +48,4 @@ Thumbs.db
 
 #Firebase
 /src/app/api-keys.ts
+/functions

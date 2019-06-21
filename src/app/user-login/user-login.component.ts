@@ -12,6 +12,7 @@ import { UserService } from  '../user.service';
 })
 export class UserLoginComponent implements OnInit{
   users: AngularFireList<any[]>;
+  currentRoute: string = this.router.url;
 
   constructor(private router: Router, private userService: UserService) { }
 
@@ -19,12 +20,12 @@ export class UserLoginComponent implements OnInit{
     this.users = this.userService.getUsers();
   }
 
-  findUser(userName: string){
+  findUser(userName){
+    console.log(userName);
     console.log(this.users);
     
-    console.log(userName);
     
-  
+    this.router.navigate(['user', userName.$key])
   }
 
   

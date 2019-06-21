@@ -10,6 +10,7 @@ import { UserService } from  '../user.service';
 })
 export class UserNavComponent implements OnInit {
   users: AngularFireList<any[]>;
+  
   constructor(private router: Router, private userService: UserService) { }
 
   ngOnInit() {
