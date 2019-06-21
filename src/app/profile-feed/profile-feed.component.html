@@ -1,3 +1,5 @@
-<p>
-  profile-feed works!
-</p>
+<div *ngFor="let user of users | async" (click)="goToProfile(user)" class="panel panel-default">
+    <div class="panel-body">
+        <h3>{{user.name}} Lastest Ride: {{user.lastRide[miles]}}</h3>
+    </div>
+</div>

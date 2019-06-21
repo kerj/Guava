@@ -1,8 +1,9 @@
-import { Component, Output, Input, EventEmitter, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { GlobalNav } from '../Models/GlobalNav.model';
 import { User } from '../Models/user.model';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
+import { AngularFireList } from 'angularfire2/database';
 
 
 @Component({
@@ -12,18 +13,18 @@ import { Router } from '@angular/router';
   providers: [UserService]
 })
 export class UserProfileComponent implements OnInit {
-  users: User[];
+  users: AngularFireList<any>[];
   @Input() globalNavs: GlobalNav[];
   @Input() selectedUser: User;
   // @Output() userId: 
   constructor(private router: Router, private userService: UserService) {}
   
   ngOnInit() {
-    this.users = this.userService.getUsers();
+   
   }
 
-  goToUserProfile(profileNavClicked: User) {
-    this.router.navigate(['users', profileNavClicked.id]);
+  goToUserProfile(profileNavClicked) {
+    this.router.navigate(['users', profileNavClicked.$key]);
   };
 
 }
