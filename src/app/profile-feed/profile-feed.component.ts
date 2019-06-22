@@ -3,6 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { AngularFireList } from 'angularfire2/database';
 import { User } from '../Models/user.model';
 import { UserService } from '../user.service';
+import { Observable } from 'rxjs'; 
 
 @Component({
   selector: 'app-profile-feed',
@@ -13,7 +14,7 @@ import { UserService } from '../user.service';
 export class ProfileFeedComponent implements OnInit {
   userId: string;
   userToDisplay;
-  users: AngularFireList<any[]>;
+  users: Observable<any[]>;
 
   constructor(private router: Router, private location: Location, private userService: UserService) { }
 

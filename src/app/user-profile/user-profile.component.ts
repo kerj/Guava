@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { AngularFireList } from 'angularfire2/database';
 
 
+
 @Component({
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',

@@ -1,17 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireList } from 'angularfire2/database';
+import { AngularFireDatabase } from 'angularfire2/database';
 import { Router } from '@angular/router';
 import { UserService } from  '../user.service';
+import { Observable } from 'rxjs';
+
  
 @Component({
   selector: 'app-user-nav',
   templateUrl: './user-nav.component.html',
-  styleUrls: ['./user-nav.component.css']
+  styleUrls: ['./user-nav.component.css'],
+  providers: [UserService]
 })
 export class UserNavComponent implements OnInit {
-  users: AngularFireList<any[]>;
+  users: Observable<any[]>;
   
-  constructor(private router: Router, private userService: UserService) { }
+  constructor(private router: Router, private userService: UserService, private db: AngularFireDatabase) { }
 
   ngOnInit() {
     this.users = this.userService.getUsers();
