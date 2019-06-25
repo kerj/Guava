@@ -1,13 +1,15 @@
-
-
 <div *ngIf="!login">
   <form>
     <label for="username">User Name</label>
-      <input [(ngModel)]="userName" type="text" name="userName" required>
+      <input type="text" [(ngModel)]="this.newUserName" name="newUser" required>
     
     <label for="password">Password</label>
-        <input [(ngModel)]="password" type="text" name="password" required>
+        <input type="text" [(ngModel)]="this.newPassword" name="newPassword" required>
       
-      <button class="btn btn-info" (click)="createUser(userName, password)">Create Account</button>
+      <button class="btn btn-info" (click)="createUser(newUserName, newPassword)">Create Account</button>
   </form>
+</div>
+
+<div>
+  <app-user-nav></app-user-nav>
 </div>

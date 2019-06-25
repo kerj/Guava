@@ -1,5 +1,4 @@
-import { Component, Output, OnInit } from '@angular/core';
-import { AngularFireList } from 'angularfire2/database';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from  '../user.service';
 import { Observable } from 'rxjs';
@@ -14,6 +13,7 @@ import { Observable } from 'rxjs';
 export class UserLoginComponent implements OnInit{
   users: Observable<any[]>;
   currentRoute: string = this.router.url;
+  loggingInUser;
 
   constructor(private router: Router, private userService: UserService) { }
 
@@ -21,12 +21,15 @@ export class UserLoginComponent implements OnInit{
     this.users = this.userService.getUsers();
   }
 
+  login(userName: string){
+    this.loggingInUser = userName;
+  }
+
   findUser(userName){
-    console.log(userName);
-    console.log(this.users);
-    
-    
     this.router.navigate(['user', userName.$key])
+    this.users.forEach(() =>{
+      console.log(this.users);
+    })
   }
 
   

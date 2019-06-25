@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { User } from './Models/user.model';
 import { GlobalNav } from './Models/GlobalNav.model';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,6 +17,12 @@ export class AppComponent {
   login = false;
   userNav = false;
   userProfile = false;
+  
+
+  tryLogin(userName){
+    this.selectedUser = userName;
+    console.log(userName);
+  }
 
 
   globalNavigate(navSelect: GlobalNav){

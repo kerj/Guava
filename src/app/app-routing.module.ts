@@ -14,7 +14,7 @@ const appRoutes: Routes = [
     component: CreateUserComponent
   },
   {
-    path: 'user/:id',
+    path: 'users/:id',
     component: UserProfileComponent
   },
 

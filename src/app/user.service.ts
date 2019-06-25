@@ -1,25 +1,36 @@
 import { Injectable } from '@angular/core';
-import { User } from './Models/user.model';
-import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { User, LastRide } from './Models/user.model';
+import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs';
 
 @Injectable()
 export class UserService {
   users: Observable<any[]>;
+  newUser: User; 
 
-  constructor(private database: AngularFireDatabase) { 
+  constructor(private database: AngularFireDatabase) {
     this.users = database.list('users').valueChanges();
-    console.log(this.users);
-    
   }
 
   getUserById(userId: string){
-    this.database.object('users/' + userId);
+    console.log(this.database.object('users/' + userId));
+    
+    return this.database.object('users/' + userId);
   }
 
-  getUsers() { 
+  getUsers() {
     console.log(this.users);
-    
     return this.users;
+  }
+
+  addUser(newUser: User) {
+    this.database.list('users').push(newUser);
+  }
+
+  updateUser(){
+
+  }
+  deleteUser(){
+
   }
 }

@@ -3,7 +3,8 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { Router } from '@angular/router';
 import { UserService } from  '../user.service';
 import { Observable } from 'rxjs';
-
+import { User } from '../Models/user.model';
+import { LastRide } from '../Models/user.model';
  
 @Component({
   selector: 'app-user-nav',
@@ -13,6 +14,8 @@ import { Observable } from 'rxjs';
 })
 export class UserNavComponent implements OnInit {
   users: Observable<any[]>;
+  lastRide = new LastRide();
+  user: User;
   
   constructor(private router: Router, private userService: UserService, private db: AngularFireDatabase) { }
 
@@ -21,7 +24,15 @@ export class UserNavComponent implements OnInit {
   }
 
   goToUserProfile(profileNavClicked) {
-    this.router.navigate(['users', profileNavClicked.$key]);
+    console.log(profileNavClicked);
+    
+    let selectedName = profileNavClicked.name;
+    let selectedPassword = profileNavClicked.password;
+    let selectedDescritpion = profileNavClicked.description;
+    this.lastRide = new LastRide(profileNavClicked.lastRide['averageMPH']);
+   
+    this.user = new User(selectedName, selectedPassword, selectedDescritpion, this.lastRide);
+    this.router.navigate(['users', profileNavClicked.name]);
   };
 
 }

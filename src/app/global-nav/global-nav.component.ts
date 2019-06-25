@@ -12,8 +12,6 @@ export class GlobalNavComponent {
 
   goTo(action){
     this.selectedNav.emit(action);
-    console.log(action);
-    
   }
 
 

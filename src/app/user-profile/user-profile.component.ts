@@ -1,9 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { GlobalNav } from '../Models/GlobalNav.model';
 import { User } from '../Models/user.model';
 import { UserService } from '../user.service';
-import { Router } from '@angular/router';
-import { AngularFireList } from 'angularfire2/database';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Location } from '@angular/common';
 
 
 
@@ -14,18 +15,19 @@ import { AngularFireList } from 'angularfire2/database';
   providers: [UserService]
 })
 export class UserProfileComponent implements OnInit {
-  users: AngularFireList<any>[];
-  @Input() globalNavs: GlobalNav[];
-  @Input() selectedUser: User;
-  // @Output() userId: 
-  constructor(private router: Router, private userService: UserService) {}
+  userId: string;
+  loggedUser;
+ 
+  constructor(private router: ActivatedRoute, private location: Location, private userService: UserService) {}
   
   ngOnInit() {
-   
+    this.router.params.forEach((urlParameters) => {
+      this.userId = urlParameters['id'];
+      console.log(this.userId);
+      
+    });
+    this.loggedUser = this.userService.getUserById(this.userId);
+    console.log(this.loggedUser);  
   }
-
-  goToUserProfile(profileNavClicked) {
-    this.router.navigate(['users', profileNavClicked.$key]);
-  };
 
 }
