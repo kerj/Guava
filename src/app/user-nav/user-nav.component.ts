@@ -32,7 +32,12 @@ export class UserNavComponent implements OnInit {
     this.lastRide = new LastRide(profileNavClicked.lastRide['averageMPH']);
    
     this.user = new User(selectedName, selectedPassword, selectedDescritpion, this.lastRide);
+    
+    
     this.router.navigate(['users', profileNavClicked.name]);
   };
-
 }
+
+
+
+

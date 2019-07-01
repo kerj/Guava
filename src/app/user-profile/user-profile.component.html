@@ -1,9 +1,18 @@
-<h2>Profile Page</h2>
+<div *ngFor="let user of users | async" (click)="selectUser(user)" class="panel panel-default">
+     <div class="panel-body"><br>
+        <h3>{{user.name}} -- Lastest Ride: {{user.lastRide['miles']}} Miles</h3>
+    </div>
+</div><br>
 
-    <!-- <h3>{{(loggedUser | async)?.name}}</h3>
-    <h4>{{(loggedUser | async)?.lastRide}}</h4>
-    <p>{{(loggedUser | async)?.description}}</p> -->
-
-<h2>Other Riders</h2>
-
-<!-- <app-user-nav></app-user-nav> -->
+<div *ngIf=(loggedUser)>
+    <h2>Profile Page</h2>
+    <h3>{{loggedUser.name}}</h3>
+    <p>{{loggedUser.description}}</p>
+    <h4>Last Ride Stats:</h4>
+    <ul>
+        <li>Total Miles: {{loggedUser.lastRide['miles']}}</li>
+        <li>Average Speed: {{loggedUser.lastRide['averageMPG']}}</li>
+        <li>Total Moving Time: {{loggedUser.lastRide['movingTime']}}</li>
+    </ul>
+    <h2>Other Riders</h2>
+</div>

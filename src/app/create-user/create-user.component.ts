@@ -13,6 +13,7 @@ import { Observable } from 'rxjs';
 
 export class CreateUserComponent{
   newUser;
+  login;
   constructor(private userService: UserService) {}
   
   createUser(userName, password){

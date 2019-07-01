@@ -8,7 +8,6 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import { GlobalNavComponent } from './global-nav/global-nav.component';
 import { UserNavComponent } from './user-nav/user-nav.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
-import { ProfileFeedComponent } from './profile-feed/profile-feed.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { routing } from './app-routing.module';
 import { masterFirebaseConfig } from './api-keys';
@@ -31,7 +30,6 @@ export const firebaseConfig = {
     GlobalNavComponent,
     UserNavComponent,
     UserProfileComponent,
-    ProfileFeedComponent,
     CreateUserComponent
   ],
   imports: [

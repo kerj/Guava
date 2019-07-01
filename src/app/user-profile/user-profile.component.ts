@@ -17,10 +17,12 @@ import { Location } from '@angular/common';
 export class UserProfileComponent implements OnInit {
   userId: string;
   loggedUser;
+  users: Observable<any[]>;
  
   constructor(private router: ActivatedRoute, private location: Location, private userService: UserService) {}
   
   ngOnInit() {
+    this.users = this.userService.getUsers();
     this.router.params.forEach((urlParameters) => {
       this.userId = urlParameters['id'];
       console.log(this.userId);
@@ -28,6 +30,10 @@ export class UserProfileComponent implements OnInit {
     });
     this.loggedUser = this.userService.getUserById(this.userId);
     console.log(this.loggedUser);  
+  }
+
+selectUser(user){
+    this.loggedUser = user; 
   }
 
 }

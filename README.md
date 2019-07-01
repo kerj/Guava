@@ -11,7 +11,8 @@ _A rebuild of the popular site strava_
 ## Setup/Installation Requirements
 
 * _This project was generated with Angular CLI_
-* _running the `ng serve` command will open the dev server;       Navigate to `http://localhost:4200/`._
+* _running the `ng serve` command will open the dev server; Navigate to `http://localhost:4200/`._
+* _Hosted via Firebase @ `https://guava-9ce10.firebaseapp.com/`
 
 
 _This is a page that will open in most up-to-date browsers. This page features several Angular componets to respond to how the user navigates the page._

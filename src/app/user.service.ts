@@ -13,13 +13,11 @@ export class UserService {
   }
 
   getUserById(userId: string){
-    console.log(this.database.object('users/' + userId));
-    
-    return this.database.object('users/' + userId);
+    console.log(userId);
+    return this.database.object('users/0' + userId);
   }
 
   getUsers() {
-    console.log(this.users);
     return this.users;
   }
 

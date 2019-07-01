@@ -14,6 +14,7 @@ export class UserLoginComponent implements OnInit{
   users: Observable<any[]>;
   currentRoute: string = this.router.url;
   loggingInUser;
+  userName;
 
   constructor(private router: Router, private userService: UserService) { }
 
